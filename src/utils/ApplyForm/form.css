@@ -1,91 +1,131 @@
 .wrapper {
   min-height: 100vh;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
+  padding: 2rem;
+  background: #f1f4f9;
 }
 
 .registration_form {
-  background: white;
-  padding: 25px;
-  border-radius: 5px;
-  width: 400px;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
   position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .registration_form .title {
   text-align: center;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: white;
-  background: rgb(13, 98, 215);
-  letter-spacing: 2px;
-  font-weight: 700;
-  position: absolute;
-  top: -25px;
-  left: -25px;
-  right: -25px;
-  padding: 15px 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  font-size: 24px;
+  color: #fff;
+  background: linear-gradient(to right, #2b6cb0, #3182ce);
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: -2rem -2rem 2rem -2rem;
 }
 
+/* Form layout */
 .form_wrap {
-  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .input_grp {
   display: flex;
-  justify-content: space-between;
-}
-.input_grp .input_wrap input,
-.input_grp .input_wrap select {
-  width: 165px;
+  gap: 1rem;
 }
 
+/* Input styling */
 .input_wrap {
-  margin-bottom: 15px;
-}
-.input_wrap:last-child {
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .input_wrap label {
-  display: block;
-  margin-bottom: 3px;
-  color: #1a1a1f;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: white;
+  padding: 0 5px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  transform-origin: left;
 }
 
-.input_wrap input[type="text"],
-.input_wrap input[type="tel"],
-.input_wrap input[type="email"],
+.input_wrap input,
 .input_wrap select {
-  width: 100%;
-  border-radius: 3px;
-  border: 1.3px solid #9597a6;
-  padding: 10px;
+  padding: 14px 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
   outline: none;
   font-size: 1rem;
+  color: black;
+  transition: border-color 0.3s ease;
+  background-color: #f9fafb;
 }
+
 .input_wrap input:focus,
 .input_wrap select:focus {
-  border-color: #063abd;
+  border-color: #3182ce;
+}
+
+.input_wrap input:focus + label,
+.input_wrap input:not(:placeholder-shown) + label,
+.input_wrap select:focus + label,
+.input_wrap select:not([value=""]) + label {
+  top: -8px;
+  font-size: 0.75rem;
+  color: #3182ce;
+  background-color: white;
 }
 
 .submit_btn {
-  width: 100%;
-  background: #0d6ad7;
-  padding: 10px;
-  border: 0;
+  padding: 14px;
+  background: #3182ce;
   color: white;
-  font-size: 17px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
+
 .submit_btn:hover {
-  background: #051c94;
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(49, 130, 206, 0.3);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
 }

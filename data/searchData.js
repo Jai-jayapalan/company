@@ -8,37 +8,37 @@ export const searchIndex = [
   {
     id: 2,
     title: "Brand Strategy & Identity",
-    url: "/service/brand_strategy",
+    url: "/service/logo_service",
     keywords: ["branding", "logo", "identity", "visual design", "brand guidelines", "corporate identity"]
   },
   {
     id: 3,
     title: "UI/UX Design & Research",
-    url: "/service/uiux_design",
+    url: "/service/uiux_service",
     keywords: ["user interface", "user experience", "wireframing", "prototyping", "figma", "adobe xd", "research"]
   },
   {
     id: 4,
     title: "Web Development",
-    url: "/service/web_development",
+    url: "/service/web_service",
     keywords: ["website", "frontend", "backend", "full stack", "react", "angular", "vue", "node", "php", "wordpress"]
   },
   {
     id: 5,
     title: "Cloud & DevOps",
-    url: "/service/cloud_devops",
+    url: "/service/cloud_service",
     keywords: ["aws", "azure", "google cloud", "docker", "kubernetes", "ci/cd", "infrastructure", "deployment"]
   },
   {
     id: 6,
     title: "Custom Software Development",
-    url: "/service/custom_software",
+    url: "/service/software_service",
     keywords: ["enterprise", "bespoke", "tailored", "business solutions", "custom applications", "saaS"]
   },
   {
     id: 7,
     title: "Digital Marketing & SEO",
-    url: "/service/digital_marketing",
+    url: "/service/digitalmarketing_service",
     keywords: ["search engine", "social media", "ppc", "content marketing", "google ads", "facebook ads", "analytics"]
   },
   {
@@ -98,7 +98,7 @@ export const searchIndex = [
   {
     id: 17,
     title: "Privacy Policy",
-    url: "/privacy",
+    url: "/policy",
     keywords: ["data protection", "gdpr", "confidentiality", "information security", "legal"]
   },
   {

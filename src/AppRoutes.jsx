@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router'
 
 import { Terms, ThankYou, Privacy, ApplyForm } from './utils'
 import { Home, About, Contact, 
-  Career, Service, DigitalMarketing,
+  Career, Service, DigitalMarketing, Team, 
   Cloud, Logo, Uiux, Software, Web, CourseList, WebDev, AIDev, AppDev, MLDev
 } from './components'
 
@@ -18,6 +18,7 @@ const AppRoutes = () => {
     <Route path='/policy' element={<Privacy />} />
     <Route path='/thankyou' element={<ThankYou />} />
     <Route path='/applyNow' element={<ApplyForm />} />
+    <Route path='/team' element={<Team />} />
 
     {/* Services */}
     <Route path='/service' element={<Service />} />

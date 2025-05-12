@@ -5,8 +5,6 @@ import './CourseLandingPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileAlt, faQuestionCircle, faTabletAlt, faCertificate } from '@fortawesome/free-solid-svg-icons'
 
-import OverAllCoursePdf from '../../../assets/coursePdf/Over All Course Brochure.pdf'
-
 const includes = [
     { icon: faFileAlt, text: 'One project file' },
     { icon: faQuestionCircle, text: '3 chapter quizzes' },
@@ -16,7 +14,7 @@ const includes = [
 
 // heading, description, techs
 
-const CourseLandingPage = ({ heading, overview, description, techs=[], ListAllUses, ImageProfile, price, duration, dimension }) => {
+const CourseLandingPage = ({ heading, overview, description, techs=[], ListAllUses, ImageProfile, price, duration, dimension, CoursePdf, pdfName }) => {
 
   return (
     <>
@@ -41,7 +39,7 @@ const CourseLandingPage = ({ heading, overview, description, techs=[], ListAllUs
                         <a href='/applyNow'>Apply Now</a>
                     </div>
                     <div className="btn2j">
-                        <a href={OverAllCoursePdf} download={'OverAllCourseData'}>Download Course Detail</a>
+                        <a href={CoursePdf} download={pdfName}>Download Course Detail</a>
                     </div>
                 </div>
             </div>

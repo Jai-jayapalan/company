@@ -12,19 +12,19 @@ export const CourseListData = [
         title: 'Full stack app development',
         description: 'Create mobile applications for Android and iOS using tools like Flutter or React Native',
         destination: '/course/app',
-        icon: faMobileAlt
+        icon: faMobileAlt,
     },
     {
         title: 'Artifical Intelligence',
         description: 'Understand AI concepts including neural networks, NLP, and intelligent systems.',
         destination: '/course/ai',
-        icon: faBrain
+        icon: faBrain,
     },
     {
         title: 'Machine Learning',
         description: 'Learn how to train models, handle data, and apply algorithms like regression and clustering.',
         destination: '/course/ml',
-        icon: faRobot
+        icon: faRobot,
     }
 ]
 
@@ -40,6 +40,7 @@ export const EachCourseDetails = [
       description: 'This comprehensive course guides you through the entire web development lifecycle—from creating static websites to deploying fully functional web applications. You’ll work with front-end tools like HTML, CSS, JavaScript, and React.js, while also mastering backend development using Node.js, Express.js, and MongoDB. The course emphasizes RESTful API design, version control with Git/GitHub, and real-world deployment strategies to ensure you’re industry-ready.',
       TechnologiesList: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'RESTAPIs', 'Git', 'GitHub'],
       mainImg: WebDevImage,
+      pdf: '/assets/coursePdf/web.pdf',
       duration: '3-6 months',
       fees: '25,000',
       whatWillYouLearn: [
@@ -55,6 +56,7 @@ export const EachCourseDetails = [
       description: 'This course is tailored for aspiring mobile developers who want to create scalable, high-performance apps for both Android and iOS. Starting from UI design with Flutter and Dart, you’ll learn to integrate Firebase for backend services, manage local storage using SQLite, and implement REST APIs. You’ll also gain experience with deployment practices and CI/CD pipelines to publish your apps efficiently.',
       TechnologiesList: ['Flutter', 'Dart', 'ReactNative', 'Firebase', 'SQLite', 'RESTAPIs', 'CI/CD'],
       mainImg: AppDevImage,
+      pdf: '/assets/coursePdf/app.pdf',
       duration: '3-6 months',
       fees: '25,000',
       whatWillYouLearn: [
@@ -70,6 +72,7 @@ export const EachCourseDetails = [
       description: 'Dive into artificial intelligence by working on hands-on projects involving deep learning, NLP, and computer vision. This course introduces core AI concepts and takes you through implementing neural networks using TensorFlow and Keras. You’ll also explore real-world applications like face recognition, sentiment analysis, and object detection while learning how to handle datasets and fine-tune model performance.',
       TechnologiesList: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'TensorFlow', 'Keras', 'NeuralNetworks', 'NLP', 'Computer Vision'],
       mainImg: AIImage,
+      pdf: '/assets/coursePdf/ai.pdf',
       duration: '4-6 months',
       fees: '35,000',
       whatWillYouLearn: [
@@ -85,6 +88,7 @@ export const EachCourseDetails = [
       description: 'This course offers a deep dive into machine learning, covering both theoretical foundations and practical implementation. You’ll explore supervised and unsupervised learning methods including regression, classification, and clustering. The curriculum also emphasizes data preprocessing, model evaluation, and deployment with MLOps practices. It’s designed for future data scientists and ML engineers aiming to make an impact in AI-driven industries.',
       TechnologiesList: ['Python', 'DataCleaning', 'FeatureEngineering', 'Regression', 'Classification', 'Clustering', 'MLOps', 'ModelDeployment'],
       mainImg: MlImage,
+      pdf: '/assets/coursePdf/ml.pdf',
       duration: '4-6 months',
       fees: '35,000',
       whatWillYouLearn: [

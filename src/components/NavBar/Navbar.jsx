@@ -17,7 +17,7 @@ import {
   faMobileAlt,
   faRobot,
   faBrain,
-  faBookOpen
+  faBookOpen,
 } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import NewNavbar from '../../utils/SearchBar/NewNavBar'
@@ -44,10 +44,6 @@ const Navbar = () => {
     setMobileMenuActive(!mobileMenuActive);
   };
 
-  const toggleDropdown = (dropdown) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
   return (
     <header>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -59,7 +55,6 @@ const Navbar = () => {
             </span>
           </a>
         </div>
-
         <ul className={`nav-links ${mobileMenuActive ? 'active' : ''}`}>
           <li style={{ '--i': 0 }}>
             <a href="/" className="nav-item">
@@ -67,7 +62,7 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li 
+          <li
             className={`dropdown ${activeDropdown === 'services' ? 'active' : ''}`}
             style={{ '--i': 1 }}
             onMouseEnter={() => setActiveDropdown('service')}
@@ -143,7 +138,7 @@ const Navbar = () => {
                 <div className="menu-column">
                   <h3>AI & Data Science Programs</h3>
                   <a href="/course/ai">
-                    <FontAwesomeIcon icon={faRobot} /> Artifical Intelligence
+                    <FontAwesomeIcon icon={faRobot} /> Artificial intelligence
                   </a>
                   <a href="/course/ml">
                     <FontAwesomeIcon icon={faBrain} /> Machine Learning

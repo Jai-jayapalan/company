@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './About.css';
 import AboutProfileImage from '../../../assets/images/about-cospixare.png'
 
+import Team from '../Team/Team'
+
 import { valuesData, technologiesData } from '../../../data/datas';
 
 const About = () => {
@@ -108,6 +110,8 @@ const About = () => {
           ))}
         </div>
       </section>
+
+      <Team />
     </main>
   );
 };

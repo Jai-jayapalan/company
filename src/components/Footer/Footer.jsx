@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter, FaThreads } from 'react-icons/fa6';
+import axios from 'axios';
 
 import { SocialLinkData, QuickLinksData } from '../../../data/FooterData';
 
@@ -14,6 +15,28 @@ const socialIcons = [
 ]
 
 const Footer = () => {
+
+  const [ email, setEmail ] = useState('')
+  const navigate = useNavigate()
+
+  const HandleSubscribeForm = async (e) => {
+    e.preventDefault()
+    try {
+        await axios.post('http://localhost:3500/api/v1/subscribe/sendEmail', email, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(() => {
+          console.log('Form submitted successfully')
+          window.alert('Thanks for subscribing')
+          setEmail('')
+          navigate('/')
+        })
+    } catch (error) {
+        console.log(error)
+    }
+  }
 
   return (
     <footer className="footer">
@@ -38,7 +61,7 @@ const Footer = () => {
             {
               QuickLinksData.map((item, index) => (
                 <li key={index}>
-                  <Link to={item.destination}>{item.title}</Link>
+                  <Link to={item.destination} target='_blank'>{item.title}</Link>
                 </li>
               ))
             }
@@ -49,14 +72,15 @@ const Footer = () => {
           <h2>Newsletter</h2>
           <p>Subscribe to our newsletter to get the latest updates and offers.</p>
           <div className="subscribe-box">
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
-              <input type="hidden" name="access_key" value="21ef4e09-e220-4a65-915d-cb8ebcb581bb" />
-              <input type="hidden" name="redirect" value="https://cospixaretechnologies.in/thank-you.html" />
-              <input type="hidden" name="subject" value="New Email submission from Cospixare Technologies" />
-              <input type="email" name="email" placeholder="Enter your email" autoComplete="email" required />
+            <form>
+              <input 
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+                required
+              />
               <button type="submit" className="cta-button">Subscribe</button>
             </form>
           </div>

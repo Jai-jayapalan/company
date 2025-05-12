@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { redirect, useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 import axios from 'axios'
 
 import './FormSection.css'
+import Loader from '../utils/Loader/Loader'
 
 const FormSection = () => {
 
@@ -15,29 +16,41 @@ const FormSection = () => {
         company: '',
         service: '',
         message: '',
-        updates: false,
+        updatesNeeded: false,
+        terms: false
     })
+
+    const [ loading, setLoading ] = useState(false)
 
     const HandleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         try {
-            // clear the form after submiting
-            setFormData({
-                name: '',
-                phone: '',
-                email: '',
-                company: '',
-                service: '',
-                message: '',
-                updates: false,
+            await axios.post('http://localhost:3500/api/v1/contact/sendEmail', formData ,{
+                headers: {
+                    "Content-Type": 'application/json'
+                },
+            }).then(() => { 
+                console.log('Data sended to backend successfully')
+                
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    company: '',
+                    service: '',
+                    message: '',
+                    updatesNeeded: false,
+                    terms: false
+                })
+                navigate('/thankyou')
             })
-            // redirect
-            navigate('/thankyou')
+            .catch((err) => { console.log(err.message) })
+            .finally(() => { setLoading(false) })
         } catch (error) {
             console.log(`Error: ${error.message}`)
         }
     }
-
 
     return (
         <>
@@ -45,7 +58,8 @@ const FormSection = () => {
                 <div className="form-group">
                     <input
                         type="text" 
-                        name="name" 
+                        name="name"
+                        required
                         className="form-input"
                         value={formData.name}
                         placeholder='Enter your name'
@@ -55,8 +69,10 @@ const FormSection = () => {
                         type="tel"
                         name="phone"
                         className="form-input"
+                        required
                         value={formData.phone}
                         placeholder='Enter your phone number'
+                        pattern='^\d{10}$'
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
                 </div>
@@ -64,15 +80,17 @@ const FormSection = () => {
                 <div className="form-group">
                     <input 
                         type="email" 
-                        name="email" 
+                        name="email"
+                        required
                         className="form-input"
                         value={formData.email}
+                        pattern='\S+@\S+\.\S+'
                         placeholder='Enter your email address'
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                     <input 
                         type="text" 
-                        name="company" 
+                        name="company"
                         className="form-input"
                         value={formData.company}
                         placeholder='Enter your company name'
@@ -82,8 +100,9 @@ const FormSection = () => {
 
                 <div className="form-group">
                     <select 
-                        name="service" 
+                        name="service"
                         className="form-select"
+                        required
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     >
@@ -97,15 +116,21 @@ const FormSection = () => {
                     </select>
                 </div>
                 
-                <textarea name="message" className="form-textarea" placeholder="Let us know what you need" required></textarea>
+                <textarea 
+                    name="message" 
+                    className="form-textarea" 
+                    placeholder="Let us know what you need"
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required>
+                </textarea>
                 <div className="checkbox-group">
                     <label className="box-labelnew">
                         <input 
                             type="checkbox"
-                            name="updates"
+                            name="updatesNeeded"
                             className="box"
                             checked={formData.updates}
-                            onChange={(e) => setFormData({ ...formData, updates: e.target.checked })}
+                            onChange={(e) => setFormData({ ...formData, updatesNeeded: e.target.checked })}
                         />
                         <p>I would like to be updated on the latest products, events & leadership.</p>
                     </label>
@@ -122,6 +147,9 @@ const FormSection = () => {
                 </div>
                 <button type="submit" className="submit-button">Submit</button>
             </form>
+            {
+                loading && <Loader />
+            }
         </>
     )
 }

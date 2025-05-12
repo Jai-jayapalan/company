@@ -4,7 +4,7 @@ import CourseLandingPage from '../CourseLandingPage/CourseLandingPage'
 import { EachCourseDetails } from '../../../data/CourseData'
 
 const WebDev = () => {
-    const { title, description, TechnologiesList, mainImg, duration, fees, whatWillYouLearn, overview } = EachCourseDetails[0]
+    const { title, description, TechnologiesList, mainImg, duration, fees, whatWillYouLearn, overview, pdf } = EachCourseDetails[0]
     console.log({
         title, description, TechnologiesList, mainImg, duration , fees, whatWillYouLearn
     })
@@ -20,6 +20,8 @@ const WebDev = () => {
                 price={fees}
                 duration={duration}
                 ListAllUses={whatWillYouLearn}
+                CoursePdf={pdf}
+                pdfName={'Web_Development'}
             />
         </>
     )

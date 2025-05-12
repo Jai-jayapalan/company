@@ -1,9 +1,14 @@
-// RegistrationForm.jsx
 import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router'
 import './form.css';
 
+import Loader from '../Loader/Loader';
 
 const RegistrationForm = () => {
+
+  const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
     fname: '',
     lname: '',
@@ -14,6 +19,8 @@ const RegistrationForm = () => {
     district: '',
   });
 
+  const [ loading, setLoading ] = useState(false)
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -22,9 +29,31 @@ const RegistrationForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
+    setLoading(true)
+    try {
+        await axios.post('http://localhost:3500/api/v1/course/sendEmail', formData, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then((success) => {
+          console.log('Form submitted successfully', success.status)
+          setFormData({
+            fname: '',
+            lname: '',
+            number: '',
+            whatsnum: '',
+            email: '',
+            course: '',
+            district: '',
+            })
+            navigate('/thankyou')
+        }).catch((err) => { console.log(err.message) })
+        .finally(() => { setLoading(false) })
+    } catch (error) {
+      console.log(error.message)
+    }
   };
 
   return (
@@ -35,22 +64,20 @@ const RegistrationForm = () => {
           <div className="form_wrap">
             <div className="input_grp">
               <div className="input_wrap">
-                <label htmlFor="fname">First Name</label>
                 <input
                   type="text"
-                  id="fname"
                   name="fname"
                   value={formData.fname}
                   onChange={handleChange}
+                  placeholder='First name'
                   required
                 />
               </div>
               <div className="input_wrap">
-                <label htmlFor="lname">Last Name</label>
                 <input
                   type="text"
-                  id="lname"
                   name="lname"
+                  placeholder='Last name'
                   value={formData.lname}
                   onChange={handleChange}
                   required
@@ -59,11 +86,10 @@ const RegistrationForm = () => {
             </div>
 
             <div className="input_wrap">
-              <label htmlFor="number">Phone Number</label>
               <input
                 type="tel"
-                id="number"
                 name="number"
+                placeholder='Enter your mobile number'
                 value={formData.number}
                 onChange={handleChange}
                 required
@@ -71,11 +97,10 @@ const RegistrationForm = () => {
             </div>
 
             <div className="input_wrap">
-              <label htmlFor="whatsnum">WhatsApp Number</label>
               <input
                 type="tel"
-                id="whatsnum"
                 name="whatsnum"
+                placeholder='Enter your whatsapp number'
                 value={formData.whatsnum}
                 onChange={handleChange}
                 required
@@ -83,11 +108,10 @@ const RegistrationForm = () => {
             </div>
 
             <div className="input_wrap">
-              <label htmlFor="email">Email Address</label>
               <input
                 type="email"
-                id="email"
                 name="email"
+                placeholder='Enter your email'
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -95,9 +119,7 @@ const RegistrationForm = () => {
             </div>
 
             <div className="input_wrap">
-              <label htmlFor="course">Course</label>
               <select
-                id="course"
                 name="course"
                 value={formData.course}
                 onChange={handleChange}
@@ -112,11 +134,10 @@ const RegistrationForm = () => {
             </div>
 
             <div className="input_wrap">
-              <label htmlFor="district">District</label>
               <input
                 type="text"
-                id="district"
                 name="district"
+                placeholder='Enter your district'
                 value={formData.district}
                 onChange={handleChange}
                 required
@@ -124,14 +145,13 @@ const RegistrationForm = () => {
             </div>
 
             <div className="input_wrap">
-              <input
-                type="submit"
-                value="Register Now"
-                className="submit_btn"
-              />
+              <button className="submit_btn" type='submit'>Register Now</button>
             </div>
           </div>
         </form>
+        {
+            loading && <Loader />
+        }
       </div>
     </div>
   );

@@ -4,3 +4,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media screen and (max-width: 768px){
+    .section-titletwo {
+        margin-top: 5rem;
+    }
+}

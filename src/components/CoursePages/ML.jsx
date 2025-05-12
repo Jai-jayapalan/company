@@ -5,7 +5,7 @@ import { EachCourseDetails } from '../../../data/CourseData'
 
 
 function ML() {
-    const { title, description, TechnologiesList, duration, fees, mainImg, whatWillYouLearn, overview } = EachCourseDetails[3]
+    const { title, description, TechnologiesList, duration, fees, mainImg, whatWillYouLearn, overview, pdf } = EachCourseDetails[3]
     return (
        <>
            <CourseLandingPage
@@ -18,6 +18,8 @@ function ML() {
                duration={duration}
                price={fees}
                ListAllUses={whatWillYouLearn}
+               CoursePdf={pdf}
+               pdfName={'Machine_Learning'}
            />
        </>
    )

@@ -1,5 +1,3 @@
-/* CareerForm.css */
-/* Form Container */
 .container-four {
   max-width: min(700px, 90%);
   margin: 50px auto;
@@ -136,23 +134,12 @@ button:hover::before {
   left: 100%;
 }
 
-.error {
-  color: #ff3e3e;
-  font-size: 14px;
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  animation: shake 0.5s ease-in-out;
-}
-
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-5px); }
   75% { transform: translateX(5px); }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container-four {
       margin: 30px auto;
@@ -164,7 +151,6 @@ button:hover::before {
   }
 }
 
-/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .container-four {
       background: rgba(30, 30, 30, 0.95);
@@ -181,7 +167,6 @@ button:hover::before {
   }
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .container-four,
   button::before,

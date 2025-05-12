@@ -4,7 +4,7 @@ import CourseLandingPage from '../CourseLandingPage/CourseLandingPage'
 import { EachCourseDetails } from '../../../data/CourseData'
 
 function AppDev() {
-     const { title, description, TechnologiesList, duration, fees, mainImg, whatWillYouLearn, overview } = EachCourseDetails[1]
+     const { title, description, TechnologiesList, duration, fees, mainImg, whatWillYouLearn, overview, pdf } = EachCourseDetails[1]
      return (
         <>
             <CourseLandingPage
@@ -17,6 +17,8 @@ function AppDev() {
                 price={fees}
                 duration={duration}
                 ListAllUses={whatWillYouLearn}
+                CoursePdf={pdf}
+                pdfName={'App_Development'}
             />
         </>
     )
