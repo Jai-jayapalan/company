@@ -338,7 +338,6 @@
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .herotwo h1 {
       font-size: 3.5rem;
@@ -416,6 +415,16 @@
 
   .servicestwo {
       padding: 4rem 1rem;
+      width: 100%;
+  }
+
+  .service-containertwo {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .section-titletwo {
@@ -442,9 +451,9 @@
       padding: 1rem 2rem;
       font-size: 1.1rem;
   }
+
 }
 
-/* Touch Device Optimizations */
 @media (hover: none) {
   .cta-btn:active {
       transform: scale(0.95);

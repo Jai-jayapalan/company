@@ -20,23 +20,24 @@ const ServicesPage = () => {
     <main>
       <section className="herotwo">
         <div className="overlay"></div>
-        <div className="hero-contenttwo">
-          <h1 className="animate-text">
-            <span>Empower Your Business</span> with <br /> Cutting-Edge <span>Technology</span>
-          </h1>
-          <p className="animate-text">
-            Unlock new possibilities with our AI-driven solutions, custom software development, 
-            and comprehensive digital strategies tailored to your needs.
-          </p>
-          <a href="#servicespage" className="cta-btn animate-btn">Discover Our Services</a>
-        </div>
+          <div className="hero-contenttwo">
+            <h1 className="animate-text">
+              <span>Empower Your Business</span> with <br /> Cutting-Edge <span>Technology</span>
+            </h1>
+            <p className="animate-text">
+              Unlock new possibilities with our AI-driven solutions, custom software development, 
+              and comprehensive digital strategies tailored to your needs.
+            </p>
+            <a href="#servicespage" className="cta-btn animate-btn">Discover Our Services</a>
+          </div>
         <div className="parallax-bg"></div>
       </section>
 
       <section className="servicestwo" id="servicespage">
         <h2 className="section-titletwo">Our Services</h2>
         <div className="service-containertwo">
-          {servicesData.map((service, index) => (
+          {
+          servicesData.map((service, index) => (
             <div 
               className="service-cardtwo"
               key={index}
