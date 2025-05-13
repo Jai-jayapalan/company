@@ -24,7 +24,6 @@ const About = () => {
 
   return (
     <main>
-      {/* Hero Section */}
       <section id="about-hero">
         <div className="hero-content-about">
           <h1 className="hero-title-about">Innovate. Elevate. Transform.</h1>

@@ -28,7 +28,6 @@ const Team = () => {
 
   return (
     <div className='teamjs' id='ourTeam'>
-      <h1>Meet Our Team</h1>
       <div className="team-sliderjt">
         <div className="team-contentjt animated-border-alt">
             <div className="data1jt">
@@ -75,6 +74,7 @@ const Team = () => {
               <img
                 src={teamMembers[activeIndex].ProfileImg || teamMembers[activeIndex].image}
                 alt={teamMembers[activeIndex].name}
+                loading='lazy'
                 className="portrait-image"
               />
             </div>
