@@ -375,17 +375,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
   }
 
   .team-contentjt {
+    position: relative; /* Add this to make absolute positioning relative to this container */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Change to flex-start to push content down */
     width: 100%;
     height: 500px;
-    border: 1px solid red;
+    overflow: visible;
+    top: 20px;
+  }
+
+  .team-sliderjt {
+    position: relative;
   }
 
   .data1jt {
@@ -396,25 +401,40 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px solid red;
+  }
+
+  .team-sliderjt {
+    overflow: visible;
   }
 
   .data2jt {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    position: absolute;
+    top: -9rem;
+    /*Adjustthisvalueasneeded*/left: 25%;
+    /*Centerhorizontally*/transform: translateX(-50%);
+    /*Centerhorizontally*/width: 150px;
+    /*Adjustsizeasneeded*/height: 200px;
+    /*Adjustsizeasneeded*/border-radius: 10px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
+    /*Ensureit'saboveotherelements*/border: 1px solid black;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+  .blob {
+    display: none;
   }
 
   .data2jt img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
-    border: 1px solid black;
+    object-fit: cover; /* Changed from fill to cover for better aspect ratio */
   }
 
   .animated-border-alt::before {
@@ -425,10 +445,14 @@
 
   .team-descriptionjt {
     text-align: justify;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .data1jt h1, .data1jt h3 {
-    font-size: 12px;
+    font-size: 24px;
+  }
+
+  .data1jt p {
+    font-size: 15px;
   }
 }
