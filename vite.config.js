@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: '../C-Backend/dist',
+    outDir: '/dist',
     assetsDir: 'assets',
     emptyOutDir: true,
     rollupOptions: {
