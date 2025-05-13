@@ -366,51 +366,70 @@
 
 /* Mobile code */
 @media only screen and (max-width: 767px) {
+  /* Hide team carousel on mobile */
   .team-carousel {
     display: none;
   }
+
+  /* Flexbox layout for team content */
   .team-contentjt {
     display: flex;
     flex-direction: column;
-    position: relative;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 600px;
-    overflow: visible;
     margin-top: 3rem;
+    overflow: visible;
+    position: relative;
   }
+
+  /* Data1 styling - Adding margin to the top for spacing */
   .data1jt {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  /* Data2 styling - Positioned with flexbox */
   .data2jt {
     position: absolute;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    width: 200px;
-    height: 200px;
     top: -150px;
     left: -20px;
-    overflow: visible;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  /* Image inside data2 */
   .data2jt img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     border: 1px solid black;
   }
 
+  /* Animation for .animated-border-alt */
   .animated-border-alt::before {
     animation: none;
     -webkit-animation: none;
     background: transparent;
   }
+
+  /* Team description - Text alignment */
   .team-descriptionjt {
     text-align: justify;
+    padding: 0 1rem;
   }
+
+  /* Font sizes for data1 */
   .data1jt h1, .data1jt h3 {
     font-size: 20px;
   }

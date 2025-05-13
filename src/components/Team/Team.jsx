@@ -119,7 +119,7 @@ const Team = () => {
                 onClick={() => handleClick(index)}
                 style={{ borderColor: member.backgroundColor }}
               >
-                <img src={member.image} alt={member.name} />
+                <img src={member.image} loading='eager' alt={member.name} />
               </div>
             );
           })}
