@@ -696,7 +696,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .why-choose-usindex {
         flex-direction: column;
         text-align: center;
@@ -735,16 +735,10 @@
 }
 
 
-@media (max-width: 768px) {
-    .hero{
-        margin-top: 8rem;
-    }
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
     .features {
         grid-template-columns: 1fr;
-    }
-
-    .main-title {
-        font-size: 2.5rem;
     }
 
     .image-sectionindex {
@@ -757,19 +751,21 @@
         padding: 20px;
         height: auto;
         gap: 2rem;
+        margin-top: 5rem;
     }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .hero-content h1, .contentindex h2 {
+        font-size: 2.1rem;
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         padding: 0 15px;
+        text-align: justify;
     }
 
     .btn {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         padding: 12px 25px;
     }
 
@@ -779,12 +775,21 @@
     
     .who-we-are {
         flex-direction: column;
-        text-align: center;
         padding: 60px 25px;
     }
+
+    .who-we-are-text p, .description {
+        text-align: justify;
+        font-size: 0.95rem;
+    }
+
+    .who-we-are-text a, .who-we-are-icons{
+        font-size: 0.95rem;
+    }
     
-    .who-we-are-text h2 {
-        font-size: 2.5rem;
+    .who-we-are-text h2, .section-titleone {
+        font-size: 1.7rem;
+        text-align: center;
     }
     
     .who-we-are-images {
@@ -800,5 +805,38 @@
     
     .icon-card {
         min-width: 200px;
+    }
+    .services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+    }
+    .why-choose-usindex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contentindex {
+        max-width: 700px;
+    }
+    .feature-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+    .feature-box p {
+        text-align: left;
     }
 }
