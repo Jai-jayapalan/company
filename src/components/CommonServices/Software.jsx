@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DetailService from '../DetailService/DetailService'
-import softwareServiceImage from '../../../assets/images/software-service.png';
-import { SoftwarebenefitsItems, SoftwareexpertiseItems, Softwareservices } from '../../../data/DigitalMarketingData'
+import softwareServiceImage from '../../assets/images/software-service.png';
+import { SoftwarebenefitsItems, SoftwareexpertiseItems, Softwareservices } from '../../data/DigitalMarketingData'
 
 const SoftwareDevelopmentPage = () => {
   return (

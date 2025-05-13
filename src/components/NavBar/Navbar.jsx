@@ -20,7 +20,8 @@ import {
   faBookOpen,
 } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import NewNavbar from '../../utils/SearchBar/NewNavBar'
+import { NewNavbar } from '../../utils'
+import CompanyLogo from '../../assets/images/logo.svg'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="logo">
           <a href="/">
-            <img src="../../../assets/images/logo.svg" alt="Cospixare Logo" />
+            <img src={CompanyLogo} alt="Cospixare Logo" />
             <span className="brand-text">
               Cospixare <span className="highlight">Technologies</span>
             </span>

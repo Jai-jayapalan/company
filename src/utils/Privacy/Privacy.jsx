@@ -1,5 +1,5 @@
 import React from 'react';
-import { privacyItems } from '../../../data/datas';
+import { privacyItems } from '../../data/datas';
 
 import { AccordianPage } from '..';
 

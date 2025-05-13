@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa6';
 import './Team.css';
 
-import { teamMembers } from '../../../data/Teammembers'
+import { teamMembers } from '../../data/Teammembers'
 
 const socialIcons = [
   <FaFacebookF />,

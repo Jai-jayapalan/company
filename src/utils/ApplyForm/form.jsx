@@ -126,10 +126,10 @@ const RegistrationForm = () => {
                 required
               >
                 <option value="">Select Course</option>
-                <option value="web">Full stack Web Development</option>
-                <option value="app">Full stack App Development</option>
-                <option value="ai">Artificial Intelligence</option>
-                <option value="ml">Machine Learning</option>
+                <option value="Full_stack_Web_Development">Full stack Web Development</option>
+                <option value="Full_stack_App_Development">Full stack App Development</option>
+                <option value="Artificial_Intelligence">Artificial Intelligence</option>
+                <option value="Machine_Learning">Machine Learning</option>
               </select>
             </div>
 

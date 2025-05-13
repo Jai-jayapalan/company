@@ -3,8 +3,8 @@ import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './CourseList.css'
-import { CourseListData } from '../../../data/CourseData'
-import OverALLCourse from '../../../assets/coursePdf/Over All Course Brochure.pdf'
+import { CourseListData } from '../../data/CourseData'
+import OverALLCourse from '../../assets/coursePdf/Over All Course Brochure.pdf'
 
 const CourseList = () => {
     return(

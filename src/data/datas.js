@@ -21,34 +21,41 @@ export const homeData = [
     }
 ]
 
+import Software from '../assets/icons/home_service_icon2.svg'
+import Web from '../assets/icons/home_service_icon5.svg'
+import DigitalMark from '../assets/icons/home_service_icon1.svg'
+import Logo from '../assets/icons/home_service_icon3.svg'
+import UIUX from '../assets/icons/home_service_icon4.svg'
+import Cloud from '../assets/icons/home_service_icon6.svg'
+
 export const servicesData = [
     {
-        image: '/assets/icons/home_service_icon2.svg',
+        image: Software,
         title: 'Custom Software Development',
         description: 'Transform your ideas into powerful, scalable software solutions designed specifically for your unique business requirements and user needs'
     },
     {
-        image: '/assets/icons/home_service_icon5.svg',
+        image: Web,
         title: 'Web Design & Development',
         description: 'Create modern, responsive websites that combine stunning design with seamless functionality to deliver exceptional user experiences.'
     },
     {
-        image: '/assets/icons/home_service_icon1.svg',
+        image: DigitalMark,
         title: 'Digital Marketing & SEO',
         description: 'Boost your online presence and reach your target audience through strategic digital marketing campaigns and advanced SEO techniques.'
     },
     {
-        image: '/assets/icons/home_service_icon3.svg',
+        image: Logo,
         title: 'Brand Strategy & Identity',
         description: 'Develop a compelling brand identity that resonates with your audience and sets you apart in the competitive market.'
     },
     {
-        image: '/assets/icons/home_service_icon4.svg',
+        image: UIUX,
         title: 'UI/UX Design & Research',
         description: 'Create intuitive and engaging user interfaces backed by thorough research to ensure optimal user experience and satisfaction.'
     },
     {
-        image: '/assets/icons/home_service_icon6.svg',
+        image: Cloud,
         title: 'Cloud & DevOps',
         description: 'Optimize your infrastructure with cutting-edge cloud solutions and streamlined DevOps practices for improved efficiency and scalability.'
     }
@@ -69,52 +76,73 @@ export const whoweareData = [
     },
 ]
 
+import P1 from '../assets/images/people-about.svg'
+import P2 from '../assets/images/growth-about.svg'
+import P3 from '../assets/images/responsibility-about.svg'
+import P4 from '../assets/images/fulfillment-about.svg'
+import P5 from '../assets/images/fair-about.svg'
+import P6 from '../assets/images/openness-about.svg'
+
 export const valuesData = [
     {
       title: "People",
-      image: "/assets/images/people-about.svg",
+      image: P1,
       description: "Our talented and diverse team is our most valuable asset. We cultivate an inclusive, supportive, and collaborative culture where everyone has the opportunity to grow, contribute meaningfully, and thrive in their professional journey."
     },
     {
       title: "Growth",
-      image: "../assets/images/growth-about.svg",
+      image: P2,
       description: "We embrace continuous learning, foster innovation, and adapt to emerging technologies to drive sustainable business success and maintain our competitive edge in the ever-evolving digital landscape."
     },
     {
       title: "Responsibility",
-      image: "../assets/images/responsibility-about.svg",
+      image: P3,
       description: "We take pride in making thoughtful decisions that prioritize ethics, fairness, and transparency in all our business practices, ensuring we build and maintain long-term trust with our clients, partners, and stakeholders."
     },
     {
       title: "Fulfillment",
-      image: "../assets/images/fulfillment-about.svg",
+      image: P4,
       description: "Passion fuels our work and drives our innovation. We create transformative technology solutions that make a meaningful impact on businesses and communities, while fostering a culture of excellence and continuous improvement in everything we do."
     },
     {
       title: "Fair Play",
-      image: "../assets/images/fair-about.svg",
+      image: P5,
       description: "Honesty and integrity form the bedrock of our business operations. We believe in conducting ourselves with the highest ethical standards, ensuring transparency and fairness in every interaction with our clients, partners, and team members."
     },
     {
       title: "Openness",
-      image: "../assets/images/openness-about.svg",
+      image: P6,
       description: "We champion transparency and open communication as core values, fostering trust and collaboration through honest dialogue and inclusive interactions with our team members, clients, and stakeholders. Our commitment to openness creates an environment where ideas flow freely and innovation thrives."
     }
 ];
 
+// About Page
+import CSS from '../assets/svg/css.svg'
+import Figmas from '../assets/svg/figma.svg'
+import Flutter from '../assets/svg/flutter.svg'
+import NodeJS from '../assets/svg/node.svg'
+import Python from '../assets/svg/python.svg'
+import React from '../assets/svg/react.svg'
+import Javascript from '../assets/svg/javascript.svg'
+import Angular from '../assets/svg/angular.svg'
+import HTML from '../assets/svg/html.svg'
+import Java from '../assets/svg/java.svg'
+import MySQL from '../assets/svg/mysql.svg'
+import MongoDB from '../assets/svg/mongodb.svg'
+
 export const technologiesData = [
-    { name: "CSS", image: "/assets/svg/css.svg" },
-    { name: "Figma", image: "/assets/svg/figma.svg" },
-    { name: "Flutter", image: "/assets/svg/flutter.svg" },
-    { name: "Node.js", image: "/assets/svg/node.svg" },
-    { name: "Python", image: "/assets/svg/python.svg" },
-    { name: "React", image: "/assets/svg/react.svg" },
-    { name: "JavaScript", image: "/assets/svg/javascript.svg" },
-    { name: "Angular", image: "/assets/svg/angular.svg" },
-    { name: "HTML", image: "/assets/svg/html.svg" },
-    { name: "Java", image: "/assets/svg/java.svg" },
-    { name: "Mysql", image: "/assets/svg/mysql.svg" },
-    { name: "Mongodb", image: "/assets/svg/mongodb.svg" }
+    { name: "CSS", image: CSS },
+    { name: "Figma", image: Figmas },
+    { name: "Flutter", image: Flutter },
+    { name: "Node.js", image: NodeJS },
+    { name: "Python", image: Python },
+    { name: "React", image: React },
+    { name: "JavaScript", image: Javascript },
+    { name: "Angular", image: Angular },
+    { name: "HTML", image: HTML },
+    { name: "Java", image: Java },
+    { name: "Mysql", image: MySQL },
+    { name: "Mongodb", image: MongoDB }
 ];
 
 export const contactInfoData = [
@@ -131,7 +159,7 @@ export const contactInfoData = [
     {
         title: '📧 Reach Us via Email',
         linkText: 'info@cospixaretechnologies.in',
-        link: 'mailto:info@cospixaretechnologies.in' // Fixed - don't use this.linkText here
+        link: 'mailto:info@cospixaretechnologies.in'
     },
 ];
 

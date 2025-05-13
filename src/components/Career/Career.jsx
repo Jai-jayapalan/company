@@ -1,8 +1,9 @@
 import React from 'react';
 import './Career.css';
 
-import { CareerBenefitsData, CareerTeamData } from '../../../data/careerData';
+import { CareerBenefitsData, CareerTeamData } from '../../data/careerData';
 import CareerForm from '../CareerForm/CareerForm';
+import BackgroundImg from '../../assets/images/careergrowth.svg'
 
 const Career = () => {
 
@@ -11,9 +12,9 @@ const Career = () => {
       <section
         id="career-hero"
         style={{
-          backgroundImage: "url('../assets/images/careergrowth.svg')", 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center' 
+          backgroundImage: `url(${BackgroundImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
         <div className="career-content">

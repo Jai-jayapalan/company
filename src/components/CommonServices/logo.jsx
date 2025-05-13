@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DetailService from '../DetailService/DetailService'
-import logoServiceImage from '../../../assets/images/logo-service.png'
-import { logoService, logoBenefitsItems, logoExpertiseItems } from '../../../data/DigitalMarketingData'
+import logoServiceImage from '../../assets/images/logo-service.png'
+import { logoService, logoBenefitsItems, logoExpertiseItems } from '../../data/DigitalMarketingData'
 
 const BrandStrategyPage = () => {
 

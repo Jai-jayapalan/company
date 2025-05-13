@@ -1,10 +1,11 @@
 import React from 'react';
 import './Home.css';
 
-import { homeData, servicesData, whoweareData } from '../../../data/datas';
-import herowrapperImg from '/assets/images/hero-wrapper.svg'
-import team1Img from '/assets/images/team1.jpg'
-import team2Img from '/assets/images/team2.jpg'
+import { homeData, servicesData, whoweareData } from '../../data/datas';
+import herowrapperImg from '../../assets/images/hero-wrapper.svg'
+import team1Img from '../../assets/images/team1.jpg'
+import team2Img from '../../assets/images/team2.jpg'
+import whyChooseUs from '../../assets/images/why-choose-us.jpg'
 
 const Home = () => {
   return (
@@ -77,7 +78,7 @@ const Home = () => {
         </div>
         <div className="image-sectionindex">
           <div className="image-containerindex">
-            <img src="/assets/images/why-choose-us.jpg" alt="Why Choose Us" />
+            <img src={whyChooseUs} alt="Why Choose Us" />
             <div className="overlay-text">
               <span>4+</span>
               <p>Years of Excellence</p>

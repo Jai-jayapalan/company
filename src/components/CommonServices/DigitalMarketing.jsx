@@ -1,7 +1,7 @@
 import React from 'react';
 
-import digitalMarketingImage from '../../../assets/images/digital-service.png';
-import { benefitsItems, expertiseItems, services } from '../../../data/DigitalMarketingData'
+import digitalMarketingImage from '../../assets/images/digital-service.png';
+import { benefitsItems, expertiseItems, services } from '../../data/DigitalMarketingData'
 import DetailService from '../DetailService/DetailService'
 
 const DigitalMarketingPage = () => {

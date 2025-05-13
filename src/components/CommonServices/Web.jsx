@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DetailService from '../DetailService/DetailService'
-import webServiceImage from '../../../assets/images/web-service.png';
-import { WebbenefitsItems, WebexpertiseItems, Webservices } from '../../../data/DigitalMarketingData'
+import webServiceImage from '../../assets/images/web-service.png';
+import { WebbenefitsItems, WebexpertiseItems, Webservices } from '../../data/DigitalMarketingData'
 
 const WebDevelopmentPage = () => {
   return (

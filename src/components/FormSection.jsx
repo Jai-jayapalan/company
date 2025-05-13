@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router'
 import axios from 'axios'
 
 import './FormSection.css'
-import Loader from '../utils/Loader/Loader'
+import {Loader} from '../utils'
 
 const FormSection = () => {
 

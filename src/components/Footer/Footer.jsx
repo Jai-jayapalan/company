@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter, FaThreads } from 'react-icons/fa6';
 import axios from 'axios';
 
-import { SocialLinkData, QuickLinksData } from '../../../data/FooterData';
+import { SocialLinkData, QuickLinksData } from '../../data/FooterData';
 
 const socialIcons = [
   <FaFacebookF />,

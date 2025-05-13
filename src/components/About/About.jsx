@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './About.css';
-import AboutProfileImage from '../../../assets/images/about-cospixare.png'
+
+import AboutProfileImage from '../../assets/images/about-cospixare.png'
 
 import Team from '../Team/Team'
 
-import { valuesData, technologiesData } from '../../../data/datas';
+import { valuesData, technologiesData } from '../../data/datas';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState(0);

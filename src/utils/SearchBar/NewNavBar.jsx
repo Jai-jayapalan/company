@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-import { searchIndex } from '../../../data/searchData'
+import { searchIndex } from '../../data/searchData'
 
 const NewNavBar = () => {
 

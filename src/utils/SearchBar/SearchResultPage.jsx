@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-import { searchIndex } from '../../../data/searchData'
+import { searchIndex } from '../../data/searchData'
 import './SearchBar.css'
 
 const SearchResultsPage = () => {

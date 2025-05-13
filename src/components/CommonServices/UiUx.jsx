@@ -2,8 +2,8 @@ import React from 'react';
 
 import DetailService from '../DetailService/DetailService'
 
-import uiUxServiceImage from '../../../assets/images/ui-ux-service.png';
-import { UIservices, UIbenefitsItems, UIexpertiseItems } from '../../../data/DigitalMarketingData'
+import uiUxServiceImage from '../../assets/images/ui-ux-service.png';
+import { UIservices, UIbenefitsItems, UIexpertiseItems } from '../../data/DigitalMarketingData'
 
 const UxUiPage = () => {
   return (

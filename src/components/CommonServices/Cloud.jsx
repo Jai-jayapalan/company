@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CloudServiceImage from '../../../assets/images/cloud-service.png'
+import CloudServiceImage from '../../assets/images/cloud-service.png'
 import DetailService from '../DetailService/DetailService'
-import { CloudService, CloudBenefitsItems, CloudExpertiseItems } from '../../../data/DigitalMarketingData'
+import { CloudService, CloudBenefitsItems, CloudExpertiseItems } from '../../data/DigitalMarketingData'
 
 const Cloud = () => {
   

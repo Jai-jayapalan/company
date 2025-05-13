@@ -1,7 +1,7 @@
 import React from 'react'
 
 import CourseLandingPage from '../CourseLandingPage/CourseLandingPage'
-import { EachCourseDetails } from '../../../data/CourseData'
+import { EachCourseDetails } from '../../data/CourseData'
 
 function AppDev() {
      const { title, description, TechnologiesList, duration, fees, mainImg, whatWillYouLearn, overview, pdf } = EachCourseDetails[1]

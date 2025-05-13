@@ -13,7 +13,6 @@ const includes = [
 ]
 
 // heading, description, techs
-
 const CourseLandingPage = ({ heading, overview, description, techs=[], ListAllUses, ImageProfile, price, duration, dimension, CoursePdf, pdfName }) => {
 
   return (

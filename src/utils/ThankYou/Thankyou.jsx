@@ -3,8 +3,8 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter, FaThreads } from 'react-icons/fa6';
 
 import './Thankyou.css';
-import ThankYouImage from '../../../assets/images/thank-you.png'
-import { socialIcons } from '../../../data/careerData'
+import ThankYouImage from '../../assets/images/thank-you.png'
+import { socialIcons } from '../../data/careerData'
 
 const ThankYouIcons = [
   <FaFacebookF />,

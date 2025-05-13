@@ -1,7 +1,7 @@
 import React from 'react'
 
 import CourseLandingPage from '../CourseLandingPage/CourseLandingPage'
-import { EachCourseDetails } from '../../../data/CourseData'
+import { EachCourseDetails } from '../../data/CourseData'
 
 const WebDev = () => {
     const { title, description, TechnologiesList, mainImg, duration, fees, whatWillYouLearn, overview, pdf } = EachCourseDetails[0]

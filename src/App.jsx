@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { GoogleAnalytics } from './components/GoogleAnalytics'
-import { CustomCursor, CustomPreLoader, PageLoader } from './utils'
+import { CustomCursor, PageLoader } from './utils'
 import { NavBar, Footer } from './components'
 
 import AppRoutes from './AppRoutes'

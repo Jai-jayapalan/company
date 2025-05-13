@@ -1,5 +1,5 @@
 import React from 'react';
-import { termsItems } from '../../../data/datas';
+import { termsItems } from '../../data/datas';
 
 import { AccordianPage } from '..';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Contact.css'
-import { contactInfoData } from '../../../data/datas';
+import { contactInfoData } from '../../data/datas';
 import FormSection from '../FormSection';
 
 const Contact = () => {
