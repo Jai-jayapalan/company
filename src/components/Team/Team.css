@@ -420,7 +420,6 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    /*Ensureit'saboveotherelements*/border: 1px solid black;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
