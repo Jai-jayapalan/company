@@ -382,4 +382,11 @@
     .info-box {
         padding: 20px;
     }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
