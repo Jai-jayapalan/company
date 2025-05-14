@@ -63,7 +63,7 @@ export const teamMembers = [
     description: 'A skilled Web Developer specializing in creating responsive, user-friendly websites and web applications. Proficient in modern front-end and back-end technologies, with a focus on performance, scalability, and clean design.',
     image: JaiOut,
     ProfileImg: JaiIn,
-    socials: ['#', '#', '#'],
+    socials: ['https://www.facebook.com/jai.jayathilak.1/', 'https://www.linkedin.com/in/jai-jayathilak', 'https://www.instagram.com/jai_jayathilak'],
     backgroundColor: 'black'
   },
 ];

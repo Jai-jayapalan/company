@@ -28,6 +28,7 @@ const Team = () => {
 
   return (
     <div className='teamjs' id='ourTeam'>
+      <h1 style={{ color: 'white' }}>Our Team Members</h1>
       <div className="team-sliderjt">
         <div className="team-contentjt animated-border-alt">
             <div className="data1jt">
