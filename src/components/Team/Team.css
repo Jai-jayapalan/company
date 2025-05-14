@@ -12,6 +12,10 @@
   opacity: 0.3;
   transition: all 0.8s ease;
   animation: blob-animate 15s infinite alternate;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 @keyframes blob-animate {
@@ -21,7 +25,6 @@
   75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
 }
 
-/* Circle navigation styles */
 .circle-navigationjt {
   display: flex;
   gap: 15px;
@@ -335,7 +338,6 @@
   }
 }
 
-/* Tablet code */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .team-carousel {
     display: none;
@@ -365,6 +367,16 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .animated-border-alt::before {
+    animation: none !important;
+    -webkit-animation: none !important;
+    background: transparent !important;
+    width: 0 !important;
+    height: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    content: none !important;
+  }
   .team-carousel {
     display: none;
   }
@@ -406,6 +418,7 @@
   .team-sliderjt {
     overflow: visible;
   }
+
 
   .data2jt {
     position: absolute;

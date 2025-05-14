@@ -1,4 +1,3 @@
-
 #about-hero {
     display: flex;
     align-items: center;
@@ -23,7 +22,6 @@
     backdrop-filter: blur(3px);
 }
 
-/* Hero Content */
 .hero-content-about {
     position: relative;
     z-index: 2;
